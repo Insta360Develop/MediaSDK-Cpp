@@ -211,9 +211,13 @@ if you has only one image  and you want turn on hdr, you can choice the **<u>Sin
 
 fi you has multiple images and you want turn on hdr . you can choice the **<u>MultiImageHdr_mbb</u>** or **<u>MultiImageHdr_mpl</u>**
 
+**<u>MultiImageHdr_mpl</u>** is faster than **<u>MultiImageHdr_mbb</u>** on running time.
+
+
+
 default hdr is turn off , it used for imagestitcher.
 
-#### <span id="flowstate">EnableFlowState<span>
+#### <span id="flowstate">EnableFlowState</span>
 
 The parameter is turn off or turn on **the flowstate**. if turn on it, the image or the video is more  smooth and steady. 
 
