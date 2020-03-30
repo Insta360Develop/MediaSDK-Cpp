@@ -42,14 +42,14 @@ MediaSDK-Cpp is a C++ library to handle stitching, editing of media from Insta36
 
 
 
-
 ## <span id="demo">Running test demo</span>
 
-**On Windows**, you can run stitcherSDKDemo.exe directly.
+
 
 **On Ubuntu**, you can do it follow the steps before run **stitcherSDKDemo**.
 
 ```bash
+$ gcc main.cc -o stitcherSDKDemo -I the path of libmediaSDK -lMediaSDK
 $ sudo chmod +x  stitcherSDKDemo
 $ export LD_LIBRARY_PATH=LD_LIBRARY_PATH:the path of libMediaSDK.so
 $ ./stitcherSDKDemo -h
