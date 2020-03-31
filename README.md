@@ -22,9 +22,6 @@ MediaSDK-Cpp is a C++ library to handle stitching, editing of media from Insta36
 - [Get Started](#started)
   - [Note](#note)
   - [Image stitcher ](#ImageStitcher)
-    - [Create ImageStitcher](#imageSticher_create)
-    - [Set Parameter](#imageSticher_param)
-    - [Start Stitch](#imageSticher_stitch)
   - [Video stitcher](#videoStitcher) 
   	- [Create VideoStitcher](#videoStitcher_create)
     - [Set Parameter](#videoStitcher_param)
@@ -49,8 +46,6 @@ $ sudo chmod +x  stitcherSDKDemo
 $ export LD_LIBRARY_PATH=LD_LIBRARY_PATH:the path of libMediaSDK.so
 $ ./stitcherSDKDemo -h
 ```
-
-
 
 ## <span id="started">Get Started</span>
 
@@ -135,9 +130,9 @@ videoStitcher->CancelStitch();
 
 #### <span id="inputpath">InputPaths</span>
 
-***On video***  The maximum size of the vector is 2. For 5.7k separated videos like `/path/to/VID_20190123_113402_00_032.insv` and `/path/to/VID_20190123_113402_10_032.insv`, please input urls of both videos with order like this {"/path/to/VID_20190123_113402_00_032.insv","/path/to/VID_20190123_113402_10_032.insv"},`xxx_00_xx.insv` means the first eye while `xxx_10_xx.insv` means the second.
+***On video***  The maximum size of the vector is 2. For 5.7k separated videos like `/path/to/VID_20190123_113402_00_032.insv` and `/path/to/VID_20190123_113402_10_032.insv`, please input urls of both videos with order like this {"`/path/to/VID_20190123_113402_00_032.insv`","`/path/to/VID_20190123_113402_10_032.insv`"},`xxx_00_xx.insv` means the first eye while `xxx_10_xx.insv` means the second.
 
-***On image***  Generally the size of the vector is 1 , if you turn on HDR , there might be multiple paths.
+***On image***  Generally the size of the vector is 1 , if you enable HDR , there might be multiple paths.
 
 #### <span id = "stitchtype">StitchType</span>
 StitchType is an enum.
