@@ -1,23 +1,24 @@
 
+
 #include <stitcher/stitcher.h>
 #include <stitcher/common.h>
 #include <iostream>
 #include <algorithm>
-//#define TEST_SINGLE_FILE
-//std::vector<std::string> image_paths = { "E:/videos/IMG_20191225_150354_00_176.insp" };
-//std::string image_output_path = "D:/test3.jpeg";
-//#ifdef TEST_SINGLE_FILE
-//std::vector<std::string> inputpaths = { "D:/VID_20190925_174132_00_009.insv" };
-//#else
-//std::vector<std::string> inputpaths = { "E:/videos/ONE X/VID_20191029_141055_00_011.insv","E:/videos/ONE X/VID_20191029_141055_10_011.insv" };
-//#endif // TEST_SINGLE_FILE
+#include <condition_variable>
+#include <mutex>
+#include <thread>
+#include <chrono>
 
+
+bool bFinised = false;
 void process_callback(long lContext, int process, int error) {
-    printf("\rprocess = %d%% ", process);
+	if(myprocess == 100) {
+		bFinised = true;
+	}	
 }
 
 void error_callback(long lContext, int error, const char* errinfo) {
-
+	bFinised = true;
 }
 
 int main(int argc, char* argv[]) {
@@ -31,6 +32,7 @@ int main(int argc, char* argv[]) {
         "{-bitrate      | same as input vidoe   | the bitrate of ouput file}\n"
         "{-enable_flowstate |                   | open flowstate           }\n"
         "{-output_size  | 1920x1080             | the resolution of output}\n";
+
 
 
     std::vector<std::string> input_paths;
@@ -104,6 +106,7 @@ int main(int argc, char* argv[]) {
         return -1;
     }
 
+	
     std::string strExt = input_paths[0].substr(input_paths[0].find_last_of(".") + 1);
     std::transform(strExt.begin(), strExt.end(), strExt.begin(), ::tolower);
     if (strExt == "insp") {
@@ -127,7 +130,12 @@ int main(int argc, char* argv[]) {
         videoStitcher->SetStitchProgressCallback(process_callback, 0);
         videoStitcher->SetStitchStateCallback(error_callback, 0);
         videoStitcher->StartStitch();
-        getchar();
+		
+
+        while (!bFinised) {
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+        }
     }
+	
     return 0;
 }

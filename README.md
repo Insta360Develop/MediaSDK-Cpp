@@ -51,7 +51,8 @@ $ ./stitcherSDKDemo -h
 
 ### <span id="note">Note</span>
 
-The video stitcher runs asynchronously. Before  **`StartStitch`**, you can call the function **`SetStitchProgressCallback`** to set a callback for receiving the current process during stitching, and call the function **`SetStitchStateCallback`** to set an error callback so that you can get the error info  if an error occurs during stitching.
+The video stitcher runs asynchronously. Before  **`StartStitch`**, you can call the function **`SetStitchProgressCallback`** to set a callback for receiving the current process during stitching, and call the function **`SetStitchStateCallback`** to set an error callback so that you can get the error info  if an error occurs during stitching. After running **StartStitch** function, you must set a **blocking state** to prevent the program from ending. You can end the blocking state by using the status returned by these two callback functions.  It can be referred to **main.cc**.
+
 The image stitcher runs synchronously.
 
 
