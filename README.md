@@ -1,39 +1,60 @@
 # MediaSDK-Cpp
 MediaSDK-Cpp is a C++ library to handle stitching, editing of media from Insta360 Cameras.
 
+
+
+### Supported cameras
+
+| Model                   | Link                                                    |
+| :---------------------- | :------------------------------------------------------ |
+| ONE X                   | http://insta360.com/product/insta360-onex/              |
+| ONE R Dual-Lens Edition | http://insta360.com/product/insta360-oner_twin-edition  |
+| ONE R Wide Edition      | http://insta360.com/product/insta360-oner_twin-edition  |
+| ONE R 1-inch Edition    | http://insta360.com/product/insta360-oner_1inch-edition |
+| ONE X2                  | https://www.insta360.com/cn/product/insta360-onex2      |
+| ONE RS                  | https://www.insta360.com/cn/product/insta360-oners      |
+
 ### Supported platforms
 
 | Platform | Version                                       |
 | :------- | :-------------------------------------------- |
 | Windows  | Windows 7 or later, only x64 supported        |
-| MacOS    | 10.8.2 or later, only x64 supported           |
 | Linux    | Ubuntu, other distributions need to be tested |
 
 ### Supported fileformat
 
 | filetype | import format | export format |
 | :------- | :------------ | :------------ |
-| Video    | insv   	   | mp4		   |
-| Image    | insp   	   | jpg           |
+| Video    | insv          | mp4           |
+| Image    | insp/jpeg     | jpg           |
 
 ## Table of contents
 
-- [Running test demo](#demo)
-- [Get Started](#started)
-  - [Note](#note)
-  - [Image stitcher ](#ImageStitcher)
-  - [Video stitcher](#videoStitcher) 
-  	- [Create VideoStitcher](#videoStitcher_create)
-    - [Set Parameter](#videoStitcher_param)
-    - [Set process callback function](#videoStitcher_process_callback)
-    - [Set error callback function](#videoStitcher_error_callback)
-    - [Start Stitch](#videoStitcher_StartStitch)
-    - [Cancel Stitch](#videoStitcher_cancelStitch)
-- [Parameters Guidance](#Guidance)
-	- [inputpath](#inputpath)
-	- [stitchType](#stitchtype)
-	- [HDRType](#hdrType)
-	- [EnableFlowState](#flowstate)
+- [MediaSDK-Cpp](#mediasdk-cpp)
+    - [Supported cameras](#supported-cameras)
+    - [Supported platforms](#supported-platforms)
+    - [Supported fileformat](#supported-fileformat)
+  - [Table of contents](#table-of-contents)
+  - [<span id="demo">Running test demo</span>](#running-test-demo)
+  - [<span id="started">Get Started</span>](#get-started)
+    - [<span id="note">Note</span>](#note)
+    - [<span id="ImageStitcher">Image Stitcher</span>](#image-stitcher)
+    - [<span id="videoStitcher">Video Stitcher</span>](#video-stitcher)
+        - [<span id="videoStitcher_create">Create VideoStitcher</span>](#create-videostitcher)
+        - [<span id="videoStitcher_param">Set Parameters</span>](#set-parameters)
+        - [<span id="videoStitcher_process_callback">Set process callback function</span>](#set-process-callback-function)
+        - [<span id="videoStitcher_error_callback">Set error callback function</span>](#set-error-callback-function)
+        - [<span id="videoStitcher_StartStitch">Start Stitch</span>](#start-stitch)
+        - [<span id="videoStitcher_cancelStitch"> Cancel Stitch</span>](#-cancel-stitch)
+  - [<span id="Guidance">Parameters Guidance</span>](#parameters-guidance)
+      - [<span id="inputpath">InputPaths</span>](#inputpaths)
+      - [<span id = "stitchtype">StitchType</span>](#stitchtype)
+      - [<span id="hdrType">HDRType</span>](#hdrtype)
+      - [<span id="flowstate">EnableFlowState</span>](#enableflowstate)
+      - [<span id="directlock">EnableDirectionLock</span>](#directlock)
+      - [<span id="stitchFusion">EnableStitchFusion</span>](#stitchFusion)
+      - [<span id="denoise">EnableDenoise</span>](#denoise)
+      - [<span id="colorplus">EnableColorPlus</span>](#colorplus)
 
 
 ## <span id="demo">Running test demo</span>
@@ -54,6 +75,13 @@ $ ./stitcherSDKDemo -h
 The video stitcher runs asynchronously. Before  **`StartStitch`**, you can call the function **`SetStitchProgressCallback`** to set a callback for receiving the current process during stitching, and call the function **`SetStitchStateCallback`** to set an error callback so that you can get the error info  if an error occurs during stitching. After running **StartStitch** function, you must set a **blocking state** to prevent the program from ending. You can end the blocking state by using the status returned by these two callback functions.  It can be referred to **main.cc**.
 
 The image stitcher runs synchronously.
+
+
+
+**CUDA Support:** 
+
+- Windows： support 
+- Ubuntu: partial support  (Removing the function that call Flowstate can speed up the stitch speed )
 
 
 ### <span id="ImageStitcher">Image Stitcher</span>
@@ -86,12 +114,19 @@ auto videoStitcher = std::make_shared<ins_media::VideoStitcher>();
 #####  <span id="videoStitcher_param">Set Parameters</span>
 
 ```c++
- videoStitcher->SetInputPath(input_paths);
- videoStitcher->SetOutputPath(output_path);
- videoStitcher->SetStitchType(stitch_type);
- videoStitcher->SetOutputSize(output_width, output_height);
- videoStitcher->SetOutputBitRate(output_bitrate);
- videoStitcher->EnableFlowState(bEnableFlowState);
+
+video_stitcher->SetInputPath(input_paths);
+video_stitcher->SetOutputPath(output_path);
+video_stitcher->SetStitchType(stitch_type);
+video_stitcher->EnableCuda(enable_cuda);
+video_stitcher->EnableStitchFusion(enalbe_stitchfusion);
+video_stitcher->SetCudaDeviceNo(gpu);
+video_stitcher->EnableColorPlus(enable_colorplus, colorpuls_model_path);
+video_stitcher->SetOutputSize(output_width, output_height);
+video_stitcher->SetOutputBitRate(output_bitrate);
+video_stitcher->EnableFlowState(enable_flowstate);
+video_stitcher->EnableDenoise(enable_denoise);
+video_stitcher->EnableDirectionLock(enable_directionlock);
 ```
 
 ##### <span id="videoStitcher_process_callback">Set process callback function</span>
@@ -160,4 +195,20 @@ enum class HDR_TYPE {
 #### <span id="flowstate">EnableFlowState</span>
 
 Bool value indicating whether you want to enable the super flowstate feature of Insta360.
+
+#### <span id="directlock">EnableDirectionLock</span>
+
+Bool value indicating whether you want to lock view direction.
+
+#### <span id="stitchFusion">EnableStitchFusion</span>
+
+Bool value indicating whether you want to image fusion.
+
+#### <span id="denoise">EnableDenoise</span>
+
+Bool value indicating whether you want to remove denoise points.
+
+#### <span id="colorplus">EnableColorPlus</span>
+
+Bool value indicating whether you want to enable color enhancement
 

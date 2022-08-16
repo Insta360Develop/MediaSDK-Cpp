@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceins__media.html">ins_media</a></li><li class="navelem"><a class="el" href="classins__media_1_1_video_stitcher.html">VideoStitcher</a></li>  </ul>
+<li class="navelem"><b>ins_media</b></li><li class="navelem"><a class="el" href="classins__media_1_1_video_stitcher.html">VideoStitcher</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -73,110 +73,165 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A class that stitch video, only support the formats that maked by Insta360 camera, for example *.insv .  
+<p>A class that stitch video, only support the formats that maked by Insta360 camera, for example *.insv . If you want to make the most of multiple GPUs, you must create process instances to correspond to each GPU. In a process instance, multiple GPUs are not supported.  
  <a href="classins__media_1_1_video_stitcher.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="stitcher_8h_source.html">stitcher.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aae6b4c4a1bc9c1b6997a2114fc83bce3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#aae6b4c4a1bc9c1b6997a2114fc83bce3">VideoStitcher</a> ()</td></tr>
-<tr class="separator:aae6b4c4a1bc9c1b6997a2114fc83bce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab77decd206fd680caab102ddfbee64ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#ab77decd206fd680caab102ddfbee64ef">~VideoStitcher</a> ()=default</td></tr>
-<tr class="separator:ab77decd206fd680caab102ddfbee64ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc7a6bf23c4f1d094a30aa41d4dae635"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#afc7a6bf23c4f1d094a30aa41d4dae635">SetInputPath</a> (std::vector&lt; std::string &gt; &amp;input_paths)</td></tr>
 <tr class="memdesc:afc7a6bf23c4f1d094a30aa41d4dae635"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the path of the source that you wanted.  <a href="classins__media_1_1_video_stitcher.html#afc7a6bf23c4f1d094a30aa41d4dae635">More...</a><br /></td></tr>
 <tr class="separator:afc7a6bf23c4f1d094a30aa41d4dae635"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ee149db1317cdd343a37fbc72a3f4e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a7ee149db1317cdd343a37fbc72a3f4e6">SetOutputPath</a> (const std::string &amp;output_path)</td></tr>
-<tr class="memdesc:a7ee149db1317cdd343a37fbc72a3f4e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the path of the output that you wanted  <a href="classins__media_1_1_video_stitcher.html#a7ee149db1317cdd343a37fbc72a3f4e6">More...</a><br /></td></tr>
+<tr class="memitem:ac8706d230a5f7f6d03453a0d2f927dfe"><td class="memItemLeft" align="right" valign="top"><a id="ac8706d230a5f7f6d03453a0d2f927dfe"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#ac8706d230a5f7f6d03453a0d2f927dfe">SetCudaDeviceNo</a> (int gpu)</td></tr>
+<tr class="memdesc:ac8706d230a5f7f6d03453a0d2f927dfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the number of Nvidia GPU (support cuda)(only windows) <br /></td></tr>
+<tr class="separator:ac8706d230a5f7f6d03453a0d2f927dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23660d84dc8131e1cec07f245732fa8e"><td class="memItemLeft" align="right" valign="top"><a id="a23660d84dc8131e1cec07f245732fa8e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a23660d84dc8131e1cec07f245732fa8e">GetCudaDeviceNum</a> ()</td></tr>
+<tr class="memdesc:a23660d84dc8131e1cec07f245732fa8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the number of Nvidia GPU (support cuda)(only windows) <br /></td></tr>
+<tr class="separator:a23660d84dc8131e1cec07f245732fa8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25d439807a5546dbc887c17f65fb977f"><td class="memItemLeft" align="right" valign="top"><a id="a25d439807a5546dbc887c17f65fb977f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>EnableCuda</b> (bool enable)</td></tr>
+<tr class="separator:a25d439807a5546dbc887c17f65fb977f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ee149db1317cdd343a37fbc72a3f4e6"><td class="memItemLeft" align="right" valign="top"><a id="a7ee149db1317cdd343a37fbc72a3f4e6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a7ee149db1317cdd343a37fbc72a3f4e6">SetOutputPath</a> (const std::string &amp;output_path)</td></tr>
+<tr class="memdesc:a7ee149db1317cdd343a37fbc72a3f4e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the path of the output that you wanted <br /></td></tr>
 <tr class="separator:a7ee149db1317cdd343a37fbc72a3f4e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a581e72ee2b146ca78e4d93d58a382280"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a581e72ee2b146ca78e4d93d58a382280">SetOutputBitRate</a> (int64_t bitRate)</td></tr>
-<tr class="memdesc:a581e72ee2b146ca78e4d93d58a382280"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the video bitrate of the output file  <a href="classins__media_1_1_video_stitcher.html#a581e72ee2b146ca78e4d93d58a382280">More...</a><br /></td></tr>
+<tr class="memitem:a581e72ee2b146ca78e4d93d58a382280"><td class="memItemLeft" align="right" valign="top"><a id="a581e72ee2b146ca78e4d93d58a382280"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a581e72ee2b146ca78e4d93d58a382280">SetOutputBitRate</a> (int64_t bitRate)</td></tr>
+<tr class="memdesc:a581e72ee2b146ca78e4d93d58a382280"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the video bitrate of the output file <br /></td></tr>
 <tr class="separator:a581e72ee2b146ca78e4d93d58a382280"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac61f168abc43bb368fe3ae06d91c55de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#ac61f168abc43bb368fe3ae06d91c55de">SetOutputSize</a> (int width, int height)</td></tr>
-<tr class="memdesc:ac61f168abc43bb368fe3ae06d91c55de"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the video resolution of the output file，default size of source  <a href="classins__media_1_1_video_stitcher.html#ac61f168abc43bb368fe3ae06d91c55de">More...</a><br /></td></tr>
+<tr class="memitem:ac61f168abc43bb368fe3ae06d91c55de"><td class="memItemLeft" align="right" valign="top"><a id="ac61f168abc43bb368fe3ae06d91c55de"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#ac61f168abc43bb368fe3ae06d91c55de">SetOutputSize</a> (int width, int height)</td></tr>
+<tr class="memdesc:ac61f168abc43bb368fe3ae06d91c55de"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the video resolution of the output file，default size of source <br /></td></tr>
 <tr class="separator:ac61f168abc43bb368fe3ae06d91c55de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0673b3c8eea09d5782a9d2309855a47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#ae0673b3c8eea09d5782a9d2309855a47">EnableFlowState</a> (bool enable)</td></tr>
 <tr class="memdesc:ae0673b3c8eea09d5782a9d2309855a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to turn on FlowState.  <a href="classins__media_1_1_video_stitcher.html#ae0673b3c8eea09d5782a9d2309855a47">More...</a><br /></td></tr>
 <tr class="separator:ae0673b3c8eea09d5782a9d2309855a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad89af984d5e41cf5e51dcba9c9aaf92d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#ad89af984d5e41cf5e51dcba9c9aaf92d">SetStitchType</a> (<a class="el" href="common_8h.html#ad51d832564d4d7df5c54ebdce3a2a73b">STITCH_TYPE</a> type)</td></tr>
+<tr class="memitem:a21511b151c117161de97b5ced1fd7a0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a21511b151c117161de97b5ced1fd7a0b">EnableDirectionLock</a> (bool enable)</td></tr>
+<tr class="memdesc:a21511b151c117161de97b5ced1fd7a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to turn on directionLock, the feautre depend on flowstate, flowstate must open if you want use the feature.  <a href="classins__media_1_1_video_stitcher.html#a21511b151c117161de97b5ced1fd7a0b">More...</a><br /></td></tr>
+<tr class="separator:a21511b151c117161de97b5ced1fd7a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdf045b264e546cd38657c4f47e07ca6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#abdf045b264e546cd38657c4f47e07ca6">EnableStitchFusion</a> (bool enable)</td></tr>
+<tr class="memdesc:abdf045b264e546cd38657c4f47e07ca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to turn on ImageFusion, not support TEMPLATE stitch.  <a href="classins__media_1_1_video_stitcher.html#abdf045b264e546cd38657c4f47e07ca6">More...</a><br /></td></tr>
+<tr class="separator:abdf045b264e546cd38657c4f47e07ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a427ff3b7ff98e33cf93bbbad8e7c4add"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a427ff3b7ff98e33cf93bbbad8e7c4add">EnableDenoise</a> (bool enable)</td></tr>
+<tr class="memdesc:a427ff3b7ff98e33cf93bbbad8e7c4add"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to turn on denoise.  <a href="classins__media_1_1_video_stitcher.html#a427ff3b7ff98e33cf93bbbad8e7c4add">More...</a><br /></td></tr>
+<tr class="separator:a427ff3b7ff98e33cf93bbbad8e7c4add"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95e7943151b7fb59288c8b7e5fe59715"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a95e7943151b7fb59288c8b7e5fe59715">EnableColorPlus</a> (bool enable, const std::string &amp;model_path=&quot;&quot;)</td></tr>
+<tr class="memdesc:a95e7943151b7fb59288c8b7e5fe59715"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to turn on ImageFusion.  <a href="classins__media_1_1_video_stitcher.html#a95e7943151b7fb59288c8b7e5fe59715">More...</a><br /></td></tr>
+<tr class="separator:a95e7943151b7fb59288c8b7e5fe59715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad89af984d5e41cf5e51dcba9c9aaf92d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#ad89af984d5e41cf5e51dcba9c9aaf92d">SetStitchType</a> (STITCH_TYPE type)</td></tr>
 <tr class="memdesc:ad89af984d5e41cf5e51dcba9c9aaf92d"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the type of stitch,  <a href="classins__media_1_1_video_stitcher.html#ad89af984d5e41cf5e51dcba9c9aaf92d">More...</a><br /></td></tr>
 <tr class="separator:ad89af984d5e41cf5e51dcba9c9aaf92d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab691bf5ae6e73aa43287f4d940918f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#aab691bf5ae6e73aa43287f4d940918f0">SetStitchProgressCallback</a> (<a class="el" href="common_8h.html#a4c6aaa083c3d13f4b3b63a7ed3f35469">stitch_process_callback</a> callback, long lcontent)</td></tr>
-<tr class="memdesc:aab691bf5ae6e73aa43287f4d940918f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the callback that can tell the client the process of stitch  <a href="classins__media_1_1_video_stitcher.html#aab691bf5ae6e73aa43287f4d940918f0">More...</a><br /></td></tr>
-<tr class="separator:aab691bf5ae6e73aa43287f4d940918f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ef5d161c6215151a8311c76922d8797"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a3ef5d161c6215151a8311c76922d8797">SetStitchStateCallback</a> (<a class="el" href="common_8h.html#afde16f21afb7f17d1c00af966e84d2b5">stitch_error_callback</a> callback, long lcontent)</td></tr>
-<tr class="memdesc:a3ef5d161c6215151a8311c76922d8797"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the callback that can tell the client the error if stitcher goes error  <a href="classins__media_1_1_video_stitcher.html#a3ef5d161c6215151a8311c76922d8797">More...</a><br /></td></tr>
-<tr class="separator:a3ef5d161c6215151a8311c76922d8797"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2439dd76ef3246112b30146a33de406"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#ab2439dd76ef3246112b30146a33de406">StartStitch</a> ()</td></tr>
-<tr class="memdesc:ab2439dd76ef3246112b30146a33de406"><td class="mdescLeft">&#160;</td><td class="mdescRight">start stitch  <a href="classins__media_1_1_video_stitcher.html#ab2439dd76ef3246112b30146a33de406">More...</a><br /></td></tr>
+<tr class="memitem:a4d1875543f23de79418af906c12092e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a4d1875543f23de79418af906c12092e5">SetStitchProgressCallback</a> (stitch_process_callback callback)</td></tr>
+<tr class="memdesc:a4d1875543f23de79418af906c12092e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the callback that can tell the client the process of stitch  <a href="classins__media_1_1_video_stitcher.html#a4d1875543f23de79418af906c12092e5">More...</a><br /></td></tr>
+<tr class="separator:a4d1875543f23de79418af906c12092e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe06cdb22506c0308e41ea51be8b97e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#abe06cdb22506c0308e41ea51be8b97e6">SetStitchStateCallback</a> (stitch_error_callback callback)</td></tr>
+<tr class="memdesc:abe06cdb22506c0308e41ea51be8b97e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the callback that can tell the client the error if stitcher goes error  <a href="classins__media_1_1_video_stitcher.html#abe06cdb22506c0308e41ea51be8b97e6">More...</a><br /></td></tr>
+<tr class="separator:abe06cdb22506c0308e41ea51be8b97e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2439dd76ef3246112b30146a33de406"><td class="memItemLeft" align="right" valign="top"><a id="ab2439dd76ef3246112b30146a33de406"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#ab2439dd76ef3246112b30146a33de406">StartStitch</a> ()</td></tr>
+<tr class="memdesc:ab2439dd76ef3246112b30146a33de406"><td class="mdescLeft">&#160;</td><td class="mdescRight">start stitch <br /></td></tr>
 <tr class="separator:ab2439dd76ef3246112b30146a33de406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94368e3df76a855cdc7bc49ba6192106"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a94368e3df76a855cdc7bc49ba6192106">CancelStitch</a> ()</td></tr>
-<tr class="memdesc:a94368e3df76a855cdc7bc49ba6192106"><td class="mdescLeft">&#160;</td><td class="mdescRight">cancel stitch  <a href="classins__media_1_1_video_stitcher.html#a94368e3df76a855cdc7bc49ba6192106">More...</a><br /></td></tr>
+<tr class="memitem:a94368e3df76a855cdc7bc49ba6192106"><td class="memItemLeft" align="right" valign="top"><a id="a94368e3df76a855cdc7bc49ba6192106"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a94368e3df76a855cdc7bc49ba6192106">CancelStitch</a> ()</td></tr>
+<tr class="memdesc:a94368e3df76a855cdc7bc49ba6192106"><td class="mdescLeft">&#160;</td><td class="mdescRight">cancel stitch <br /></td></tr>
 <tr class="separator:a94368e3df76a855cdc7bc49ba6192106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eec59c32f57e9e41cd7838d1c45cede"><td class="memItemLeft" align="right" valign="top"><a id="a3eec59c32f57e9e41cd7838d1c45cede"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a3eec59c32f57e9e41cd7838d1c45cede">GetStitchProgress</a> () const</td></tr>
+<tr class="memdesc:a3eec59c32f57e9e41cd7838d1c45cede"><td class="mdescLeft">&#160;</td><td class="mdescRight">get stitch progress 0 ~ 100 <br /></td></tr>
+<tr class="separator:a3eec59c32f57e9e41cd7838d1c45cede"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class that stitch video, only support the formats that maked by Insta360 camera, for example *.insv . </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aae6b4c4a1bc9c1b6997a2114fc83bce3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae6b4c4a1bc9c1b6997a2114fc83bce3">&#9670;&nbsp;</a></span>VideoStitcher()</h2>
+<div class="textblock"><p>A class that stitch video, only support the formats that maked by Insta360 camera, for example *.insv . If you want to make the most of multiple GPUs, you must create process instances to correspond to each GPU. In a process instance, multiple GPUs are not supported. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a95e7943151b7fb59288c8b7e5fe59715"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95e7943151b7fb59288c8b7e5fe59715">&#9670;&nbsp;</a></span>EnableColorPlus()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ins_media::VideoStitcher::VideoStitcher </td>
+          <td class="memname">void ins_media::VideoStitcher::EnableColorPlus </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab77decd206fd680caab102ddfbee64ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab77decd206fd680caab102ddfbee64ef">&#9670;&nbsp;</a></span>~VideoStitcher()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname">ins_media::VideoStitcher::~VideoStitcher </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>model_path</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Whether to turn on ImageFusion. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>true is on and false is off, default off </td></tr>
+    <tr><td class="paramname">model_path</td><td>this param is required for the feature, if the param is empty, the feature is disabled </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a94368e3df76a855cdc7bc49ba6192106"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94368e3df76a855cdc7bc49ba6192106">&#9670;&nbsp;</a></span>CancelStitch()</h2>
+<a id="a427ff3b7ff98e33cf93bbbad8e7c4add"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a427ff3b7ff98e33cf93bbbad8e7c4add">&#9670;&nbsp;</a></span>EnableDenoise()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool ins_media::VideoStitcher::CancelStitch </td>
+          <td class="memname">void ins_media::VideoStitcher::EnableDenoise </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>cancel stitch </p>
+<p>Whether to turn on denoise. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>true is on and false is off, default off </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a21511b151c117161de97b5ced1fd7a0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21511b151c117161de97b5ced1fd7a0b">&#9670;&nbsp;</a></span>EnableDirectionLock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ins_media::VideoStitcher::EnableDirectionLock </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether to turn on directionLock, the feautre depend on flowstate, flowstate must open if you want use the feature. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>true is on and false is off, default off \ </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -199,7 +254,33 @@ Public Member Functions</h2></td></tr>
 <p>Whether to turn on FlowState. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">enable</td><td>true is on and false is off defaule off </td></tr>
+    <tr><td class="paramname">enable</td><td>true is on and false is off, default off </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abdf045b264e546cd38657c4f47e07ca6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdf045b264e546cd38657c4f47e07ca6">&#9670;&nbsp;</a></span>EnableStitchFusion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ins_media::VideoStitcher::EnableStitchFusion </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether to turn on ImageFusion, not support TEMPLATE stitch. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>true is on and false is off, default off </td></tr>
   </table>
   </dd>
 </dl>
@@ -225,86 +306,15 @@ Public Member Functions</h2></td></tr>
 <p>set the path of the source that you wanted. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">input_paths</td><td>if the source is the kind that ‘5.7k’, the size of the vector is 2，1 othersize <br  />
- </td></tr>
+    <tr><td class="paramname">input_paths</td><td>if the source is the kind that ‘5.7k’, the size of the vector is 2，1 othersize </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a581e72ee2b146ca78e4d93d58a382280"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a581e72ee2b146ca78e4d93d58a382280">&#9670;&nbsp;</a></span>SetOutputBitRate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ins_media::VideoStitcher::SetOutputBitRate </td>
-          <td>(</td>
-          <td class="paramtype">int64_t&#160;</td>
-          <td class="paramname"><em>bitRate</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>set the video bitrate of the output file </p>
-
-</div>
-</div>
-<a id="a7ee149db1317cdd343a37fbc72a3f4e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ee149db1317cdd343a37fbc72a3f4e6">&#9670;&nbsp;</a></span>SetOutputPath()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ins_media::VideoStitcher::SetOutputPath </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>output_path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>set the path of the output that you wanted </p>
-
-</div>
-</div>
-<a id="ac61f168abc43bb368fe3ae06d91c55de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac61f168abc43bb368fe3ae06d91c55de">&#9670;&nbsp;</a></span>SetOutputSize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ins_media::VideoStitcher::SetOutputSize </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>width</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>height</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>set the video resolution of the output file，default size of source </p>
-
-</div>
-</div>
-<a id="aab691bf5ae6e73aa43287f4d940918f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab691bf5ae6e73aa43287f4d940918f0">&#9670;&nbsp;</a></span>SetStitchProgressCallback()</h2>
+<a id="a4d1875543f23de79418af906c12092e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d1875543f23de79418af906c12092e5">&#9670;&nbsp;</a></span>SetStitchProgressCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -312,19 +322,9 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ins_media::VideoStitcher::SetStitchProgressCallback </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="common_8h.html#a4c6aaa083c3d13f4b3b63a7ed3f35469">stitch_process_callback</a>&#160;</td>
-          <td class="paramname"><em>callback</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">stitch_process_callback&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>lcontent</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -340,8 +340,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3ef5d161c6215151a8311c76922d8797"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ef5d161c6215151a8311c76922d8797">&#9670;&nbsp;</a></span>SetStitchStateCallback()</h2>
+<a id="abe06cdb22506c0308e41ea51be8b97e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe06cdb22506c0308e41ea51be8b97e6">&#9670;&nbsp;</a></span>SetStitchStateCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -349,19 +349,9 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ins_media::VideoStitcher::SetStitchStateCallback </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="common_8h.html#afde16f21afb7f17d1c00af966e84d2b5">stitch_error_callback</a>&#160;</td>
-          <td class="paramname"><em>callback</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">stitch_error_callback&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>lcontent</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -386,7 +376,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void ins_media::VideoStitcher::SetStitchType </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="common_8h.html#ad51d832564d4d7df5c54ebdce3a2a73b">STITCH_TYPE</a>&#160;</td>
+          <td class="paramtype">STITCH_TYPE&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
           <td></td>
         </tr>
@@ -403,27 +393,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab2439dd76ef3246112b30146a33de406"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2439dd76ef3246112b30146a33de406">&#9670;&nbsp;</a></span>StartStitch()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ins_media::VideoStitcher::StartStitch </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>start stitch </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>stitcher/<a class="el" href="stitcher_8h_source.html">stitcher.h</a></li>
+<li>D:/workspace/MediaSDK/include/stitcher/<a class="el" href="stitcher_8h_source.html">stitcher.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

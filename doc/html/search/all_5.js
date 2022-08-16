@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hdr_5ftype_7',['HDR_TYPE',['../common_8h.html#a44871131aad44ad1073706f01397b723',1,'common.h']]]
+  ['videostitcher_20',['VideoStitcher',['../classins__media_1_1_video_stitcher.html',1,'ins_media']]]
 ];

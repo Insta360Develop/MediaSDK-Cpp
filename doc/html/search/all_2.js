@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['dynamicstitch_4',['DYNAMICSTITCH',['../common_8h.html#ad51d832564d4d7df5c54ebdce3a2a73ba5894acfd879856dae024f5713935124a',1,'common.h']]]
+  ['getcudadevicenum_6',['GetCudaDeviceNum',['../classins__media_1_1_video_stitcher.html#a23660d84dc8131e1cec07f245732fa8e',1,'ins_media::VideoStitcher']]],
+  ['getstitchprogress_7',['GetStitchProgress',['../classins__media_1_1_video_stitcher.html#a3eec59c32f57e9e41cd7838d1c45cede',1,'ins_media::VideoStitcher']]]
 ];

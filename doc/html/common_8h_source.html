@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MediaSDK: stitcher/common.h Source File</title>
+<title>MediaSDK: D:/workspace/MediaSDK/include/stitcher/common.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_55e2fc2461c93c2e1e3782e6612588c6.html">stitcher</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6576a1823b71109988d6636ae7fe47c1.html">MediaSDK</a></li><li class="navelem"><a class="el" href="dir_ef2b67f07c5373a8ecdc30e6ee168502.html">include</a></li><li class="navelem"><a class="el" href="dir_0311cc63bf91c9cdc0e77d4b8d1b211a.html">stitcher</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,59 +69,43 @@ $(function() {
 <div class="title">common.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="common_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef INSTA360_COMMOM_H__</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef INSTA360_COMMOM_H__</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define INSTA360_COMMOM_H__</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="common_8h.html#a1083b691214795c373518544487f328a">    4</a></span>&#160;<span class="preprocessor">#define INSTA360_NAMESPACE ins_media</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618">    5</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618">STITCH_ERR</a> {</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618a8d0a91dd182222c32feafc561c666818">NoMetaData</a>,</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618a8c9bfe4b841fd7210190b0634d4f5ff6">NoSupportedFormat</a>,</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618aa4ebde2bcbfcf313c99c44181cfa7a10">InitPipelineFailed</a>,</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618a8d9e0a8c8d8f7915f537a65b7db61fab">FlowStateInitFailed</a>,</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618ac98c4b0eafe4d1031cd595358e3ba5d7">BlenderInitFailed</a>,</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618a0b1c88d78c1fd2fb80f380dbb139cde7">BlendError</a>,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618a8215504f37eed67165f827d3f7d45879">InvaildParam</a> = -100,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618a70a47cae4eb221930f2663fd244369ea">NoError</a> = 0,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="common_8h.html#a44871131aad44ad1073706f01397b723">   16</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="common_8h.html#a44871131aad44ad1073706f01397b723">HDR_TYPE</a> {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="common_8h.html#a44871131aad44ad1073706f01397b723aa42a14bb316f16dfcb5eaba3245216db">ImageHdr_NONE</a> = -1,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="common_8h.html#a44871131aad44ad1073706f01397b723a65cb093eb1e320184cb78980a57f9963">SingleImageHdr</a> = 0,</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="common_8h.html#a44871131aad44ad1073706f01397b723ae1103a38904b6fabe5065fda888d50df">MultiImageHdr_mbb</a> = 1,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="common_8h.html#a44871131aad44ad1073706f01397b723a1bbe55ecc04b463af6490faee044ed03">MultiImageHdr_mpl</a> = 2,</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="common_8h.html#ad51d832564d4d7df5c54ebdce3a2a73b">   23</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="common_8h.html#ad51d832564d4d7df5c54ebdce3a2a73b">STITCH_TYPE</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="common_8h.html#ad51d832564d4d7df5c54ebdce3a2a73ba9208fdeb4912b59451a5aa9c4a66aba1">TEMPLATE</a>,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="common_8h.html#ad51d832564d4d7df5c54ebdce3a2a73ba78af6b14ce7ccf280ac26a6adef30488">OPTFLOW</a>,</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="common_8h.html#ad51d832564d4d7df5c54ebdce3a2a73ba5894acfd879856dae024f5713935124a">DYNAMICSTITCH</a>,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="common_8h.html#a4c6aaa083c3d13f4b3b63a7ed3f35469">   29</a></span>&#160;<span class="keyword">typedef</span> void (*<a class="code" href="common_8h.html#a4c6aaa083c3d13f4b3b63a7ed3f35469">stitch_process_callback</a>)(<span class="keywordtype">long</span> lContext, <span class="keywordtype">int</span> process, <span class="keywordtype">int</span> error);</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="common_8h.html#afde16f21afb7f17d1c00af966e84d2b5">   30</a></span>&#160;<span class="keyword">typedef</span> void (*<a class="code" href="common_8h.html#afde16f21afb7f17d1c00af966e84d2b5">stitch_error_callback</a>)(<span class="keywordtype">long</span> lContext, <span class="keywordtype">int</span> error, <span class="keyword">const</span> <span class="keywordtype">char</span>* errinfo);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define INSTA360_NAMESPACE ins_media</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">enum class</span> STITCH_ERR {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    NoMetaData,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    NoSupportedFormat,</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    InitPipelineFailed,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    FlowStateInitFailed,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    BlenderInitFailed,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    ColorPlusInitFailed,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    DenoiseInitFailed,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    StitchFusionInitFailed,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    BlendError,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    InvaildParam = -100,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    NoError = 0,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">enum class</span> HDR_TYPE {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    ImageHdr_NONE = -1,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    SingleImageHdr = 0,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    MultiImageHdr_mbb = 1,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    MultiImageHdr_mpl = 2,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">enum class</span> STITCH_TYPE {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    TEMPLATE,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    OPTFLOW,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    DYNAMICSTITCH,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">typedef</span> std::function&lt;void(<span class="keywordtype">int</span> process, <span class="keywordtype">int</span> error)&gt; stitch_process_callback;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">typedef</span> std::function&lt;void(<span class="keywordtype">int</span> error, <span class="keyword">const</span> <span class="keywordtype">char</span>* errinfo)&gt; stitch_error_callback;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="acommon_8h_html_a397c620e0ee08b91fef58fa8e9e32618a8c9bfe4b841fd7210190b0634d4f5ff6"><div class="ttname"><a href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618a8c9bfe4b841fd7210190b0634d4f5ff6">STITCH_ERR::NoSupportedFormat</a></div><div class="ttdeci">@ NoSupportedFormat</div></div>
-<div class="ttc" id="acommon_8h_html_a397c620e0ee08b91fef58fa8e9e32618a8215504f37eed67165f827d3f7d45879"><div class="ttname"><a href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618a8215504f37eed67165f827d3f7d45879">STITCH_ERR::InvaildParam</a></div><div class="ttdeci">@ InvaildParam</div></div>
-<div class="ttc" id="acommon_8h_html_a44871131aad44ad1073706f01397b723a65cb093eb1e320184cb78980a57f9963"><div class="ttname"><a href="common_8h.html#a44871131aad44ad1073706f01397b723a65cb093eb1e320184cb78980a57f9963">HDR_TYPE::SingleImageHdr</a></div><div class="ttdeci">@ SingleImageHdr</div></div>
-<div class="ttc" id="acommon_8h_html_a44871131aad44ad1073706f01397b723ae1103a38904b6fabe5065fda888d50df"><div class="ttname"><a href="common_8h.html#a44871131aad44ad1073706f01397b723ae1103a38904b6fabe5065fda888d50df">HDR_TYPE::MultiImageHdr_mbb</a></div><div class="ttdeci">@ MultiImageHdr_mbb</div></div>
-<div class="ttc" id="acommon_8h_html_a397c620e0ee08b91fef58fa8e9e32618a0b1c88d78c1fd2fb80f380dbb139cde7"><div class="ttname"><a href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618a0b1c88d78c1fd2fb80f380dbb139cde7">STITCH_ERR::BlendError</a></div><div class="ttdeci">@ BlendError</div></div>
-<div class="ttc" id="acommon_8h_html_a44871131aad44ad1073706f01397b723a1bbe55ecc04b463af6490faee044ed03"><div class="ttname"><a href="common_8h.html#a44871131aad44ad1073706f01397b723a1bbe55ecc04b463af6490faee044ed03">HDR_TYPE::MultiImageHdr_mpl</a></div><div class="ttdeci">@ MultiImageHdr_mpl</div></div>
-<div class="ttc" id="acommon_8h_html_a4c6aaa083c3d13f4b3b63a7ed3f35469"><div class="ttname"><a href="common_8h.html#a4c6aaa083c3d13f4b3b63a7ed3f35469">stitch_process_callback</a></div><div class="ttdeci">void(* stitch_process_callback)(long lContext, int process, int error)</div><div class="ttdef"><b>Definition:</b> common.h:29</div></div>
-<div class="ttc" id="acommon_8h_html_a397c620e0ee08b91fef58fa8e9e32618a8d9e0a8c8d8f7915f537a65b7db61fab"><div class="ttname"><a href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618a8d9e0a8c8d8f7915f537a65b7db61fab">STITCH_ERR::FlowStateInitFailed</a></div><div class="ttdeci">@ FlowStateInitFailed</div></div>
-<div class="ttc" id="acommon_8h_html_a44871131aad44ad1073706f01397b723aa42a14bb316f16dfcb5eaba3245216db"><div class="ttname"><a href="common_8h.html#a44871131aad44ad1073706f01397b723aa42a14bb316f16dfcb5eaba3245216db">HDR_TYPE::ImageHdr_NONE</a></div><div class="ttdeci">@ ImageHdr_NONE</div></div>
-<div class="ttc" id="acommon_8h_html_a397c620e0ee08b91fef58fa8e9e32618a8d0a91dd182222c32feafc561c666818"><div class="ttname"><a href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618a8d0a91dd182222c32feafc561c666818">STITCH_ERR::NoMetaData</a></div><div class="ttdeci">@ NoMetaData</div></div>
-<div class="ttc" id="acommon_8h_html_a397c620e0ee08b91fef58fa8e9e32618ac98c4b0eafe4d1031cd595358e3ba5d7"><div class="ttname"><a href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618ac98c4b0eafe4d1031cd595358e3ba5d7">STITCH_ERR::BlenderInitFailed</a></div><div class="ttdeci">@ BlenderInitFailed</div></div>
-<div class="ttc" id="acommon_8h_html_a397c620e0ee08b91fef58fa8e9e32618"><div class="ttname"><a href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618">STITCH_ERR</a></div><div class="ttdeci">STITCH_ERR</div><div class="ttdef"><b>Definition:</b> common.h:5</div></div>
-<div class="ttc" id="acommon_8h_html_a397c620e0ee08b91fef58fa8e9e32618a70a47cae4eb221930f2663fd244369ea"><div class="ttname"><a href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618a70a47cae4eb221930f2663fd244369ea">STITCH_ERR::NoError</a></div><div class="ttdeci">@ NoError</div></div>
-<div class="ttc" id="acommon_8h_html_ad51d832564d4d7df5c54ebdce3a2a73ba5894acfd879856dae024f5713935124a"><div class="ttname"><a href="common_8h.html#ad51d832564d4d7df5c54ebdce3a2a73ba5894acfd879856dae024f5713935124a">STITCH_TYPE::DYNAMICSTITCH</a></div><div class="ttdeci">@ DYNAMICSTITCH</div></div>
-<div class="ttc" id="acommon_8h_html_ad51d832564d4d7df5c54ebdce3a2a73b"><div class="ttname"><a href="common_8h.html#ad51d832564d4d7df5c54ebdce3a2a73b">STITCH_TYPE</a></div><div class="ttdeci">STITCH_TYPE</div><div class="ttdef"><b>Definition:</b> common.h:23</div></div>
-<div class="ttc" id="acommon_8h_html_ad51d832564d4d7df5c54ebdce3a2a73ba9208fdeb4912b59451a5aa9c4a66aba1"><div class="ttname"><a href="common_8h.html#ad51d832564d4d7df5c54ebdce3a2a73ba9208fdeb4912b59451a5aa9c4a66aba1">STITCH_TYPE::TEMPLATE</a></div><div class="ttdeci">@ TEMPLATE</div></div>
-<div class="ttc" id="acommon_8h_html_a397c620e0ee08b91fef58fa8e9e32618aa4ebde2bcbfcf313c99c44181cfa7a10"><div class="ttname"><a href="common_8h.html#a397c620e0ee08b91fef58fa8e9e32618aa4ebde2bcbfcf313c99c44181cfa7a10">STITCH_ERR::InitPipelineFailed</a></div><div class="ttdeci">@ InitPipelineFailed</div></div>
-<div class="ttc" id="acommon_8h_html_a44871131aad44ad1073706f01397b723"><div class="ttname"><a href="common_8h.html#a44871131aad44ad1073706f01397b723">HDR_TYPE</a></div><div class="ttdeci">HDR_TYPE</div><div class="ttdef"><b>Definition:</b> common.h:16</div></div>
-<div class="ttc" id="acommon_8h_html_ad51d832564d4d7df5c54ebdce3a2a73ba78af6b14ce7ccf280ac26a6adef30488"><div class="ttname"><a href="common_8h.html#ad51d832564d4d7df5c54ebdce3a2a73ba78af6b14ce7ccf280ac26a6adef30488">STITCH_TYPE::OPTFLOW</a></div><div class="ttdeci">@ OPTFLOW</div></div>
-<div class="ttc" id="acommon_8h_html_afde16f21afb7f17d1c00af966e84d2b5"><div class="ttname"><a href="common_8h.html#afde16f21afb7f17d1c00af966e84d2b5">stitch_error_callback</a></div><div class="ttdeci">void(* stitch_error_callback)(long lContext, int error, const char *errinfo)</div><div class="ttdef"><b>Definition:</b> common.h:30</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

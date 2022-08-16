@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['imagestitcher_48',['ImageStitcher',['../classins__media_1_1_image_stitcher.html#a69a128cd09bb04d941304de41c0e9587',1,'ins_media::ImageStitcher']]]
+  ['getcudadevicenum_29',['GetCudaDeviceNum',['../classins__media_1_1_video_stitcher.html#a23660d84dc8131e1cec07f245732fa8e',1,'ins_media::VideoStitcher']]],
+  ['getstitchprogress_30',['GetStitchProgress',['../classins__media_1_1_video_stitcher.html#a3eec59c32f57e9e41cd7838d1c45cede',1,'ins_media::VideoStitcher']]]
 ];
