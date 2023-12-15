@@ -155,6 +155,7 @@ int main(int argc, char* argv[]) {
 			image_stitcher->EnableFlowState(enable_flowstate);
 			image_stitcher->EnableDenoise(enable_denoise);
 			image_stitcher->EnableColorPlus(enable_colorplus, colorpuls_model_path);
+			image_stitcher->EnableCuda(enable_cuda);
 			image_stitcher->Stitch();
 		}
 		else if (suffix == "insv") {
