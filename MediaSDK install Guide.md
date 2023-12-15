@@ -10,7 +10,7 @@
 
 ​	Once installation is complete, run MediaSDKDemo. If you see the messages below, it confirms that 	libMediaSDK has been installed successfully.
 
-    <img src=".\pic\install.jpg" alt="image-20231208150840440" style="zoom:80%;" />
+   <img src=".\pic\demo.jpg" alt="image-20231208151044846" style="zoom:80%;" />
 
 3. Debugging with MediaSDKDemo   
 
