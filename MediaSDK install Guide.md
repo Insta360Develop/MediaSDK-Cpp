@@ -4,13 +4,13 @@
 
 ​	`sudo dpkg -i libMediaSDK-dev_2.0-0_amd64_ubuntu18.04.deb`	
 
-
+   <img src=".\pic\install.jpg" alt="image-20231208150840440" style="zoom:80%;" />
 
 2. Post-Installation Check for MediaSDK
 
 ​	Once installation is complete, run MediaSDKDemo. If you see the messages below, it confirms that 	libMediaSDK has been installed successfully.
 
-
+    <img src=".\pic\install.jpg" alt="image-20231208150840440" style="zoom:80%;" />
 
 3. Debugging with MediaSDKDemo   
 
