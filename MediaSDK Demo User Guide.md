@@ -26,6 +26,8 @@ can not find input_file
 {-image_type           | jpg                   | jpg                           }
 {                                                png                           }
 {-gpu_no               | default 0             | gpu number begin with 0       }
+{-camera_accessory_type| default 0             | refer to 'common.h'           }
+{-enable_area_sample   | OFF                   | used to Eliminate moiré       }
 ```
 
 ###### 2、 "-inputs" 
@@ -110,6 +112,14 @@ can not find input_file
 ###### 13、"-enable_colorplus"
 
 ​	Engages enhanced color correction features. When using this option, the model file path can be specified using the parameter `-colorplus_model`.
+
+###### 14、"-camera_accessory_type"
+
+​	This parameter is used to set the type of camera accessory.
+
+###### 15、"-enable_area_sample"
+
+​	This participation is used to eliminate moiré when exporting to low resolution.
 
 ###### 14、Note
 ​	For optimal viewing of panoramic content, using Insta360's Studio or PotPlayer is recommended, with appropriate panorama viewing settings enabled.

@@ -26,6 +26,8 @@ can not find input_file
 {-image_type           | jpg                   | jpg                           }
 {                                                png                           }
 {-gpu_no               | default 0             | gpu number begin with 0       }
+{-camera_accessory_type| default 0             | refer to 'common.h'           }
+{-enable_area_sample   | OFF                   | used to Eliminate moiré       }
 ```
 
 ###### 2、"**-inputs**"参数 
@@ -111,5 +113,13 @@ can not find input_file
 
 ​	这个参数用于开启色彩增强功能，同时指定模型文件，可以使用参数"-colorplus_model"指定模型文件路径
 
-###### 14、Note
+###### 14、"-camera_accessory_type"参数
+
+​	这个参数用于保护镜类型的设置
+
+###### 15、"-enable_area_sample"参数
+
+​	这个参与用于消除在导出低分辨率时，消除摩尔纹
+
+###### 16、Note
 ​	对于全景素材的播放默认，建议使用insta360的stuido或者potplayer，通过设置选项进行全景查看。

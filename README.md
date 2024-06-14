@@ -13,6 +13,8 @@ MediaSDK-Cpp is a C++ library to handle stitching, editing of media from Insta36
 | ONE R 1-inch Edition    | http://insta360.com/product/insta360-oner_1inch-edition |
 | ONE X2                  | https://www.insta360.com/cn/product/insta360-onex2      |
 | ONE RS                  | https://www.insta360.com/cn/product/insta360-oners      |
+| ONE X3                  | https://www.insta360.com/cn/product/insta360-x3         |
+| ONE X4                  | https://www.insta360.com/cn/product/insta360-x4         |
 
 ### Supported platforms
 

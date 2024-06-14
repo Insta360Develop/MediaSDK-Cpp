@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MediaSDK: ins_media::VideoStitcher Class Reference</title>
+<title>CameraSDK: ins_media::VideoStitcher Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MediaSDK
+   <div id="projectname">CameraSDK
    </div>
   </td>
  </tr>
@@ -83,6 +83,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afc7a6bf23c4f1d094a30aa41d4dae635"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#afc7a6bf23c4f1d094a30aa41d4dae635">SetInputPath</a> (std::vector&lt; std::string &gt; &amp;input_paths)</td></tr>
 <tr class="memdesc:afc7a6bf23c4f1d094a30aa41d4dae635"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the path of the source that you wanted.  <a href="classins__media_1_1_video_stitcher.html#afc7a6bf23c4f1d094a30aa41d4dae635">More...</a><br /></td></tr>
 <tr class="separator:afc7a6bf23c4f1d094a30aa41d4dae635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacdec66eeef46e452879825d2421d766"><td class="memItemLeft" align="right" valign="top"><a id="aacdec66eeef46e452879825d2421d766"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#aacdec66eeef46e452879825d2421d766">SetStabDataOutputPath</a> (const std::string file_path)</td></tr>
+<tr class="memdesc:aacdec66eeef46e452879825d2421d766"><td class="mdescLeft">&#160;</td><td class="mdescRight">set output path of the stab path <br /></td></tr>
+<tr class="separator:aacdec66eeef46e452879825d2421d766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5da5c91216cb1ce9cf9c17a2030df00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#ac5da5c91216cb1ce9cf9c17a2030df00">SetImageSequenceInfo</a> (const std::string output_dir, IMAGE_TYPE image_type)</td></tr>
+<tr class="memdesc:ac5da5c91216cb1ce9cf9c17a2030df00"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the info of imgage sequence  <a href="classins__media_1_1_video_stitcher.html#ac5da5c91216cb1ce9cf9c17a2030df00">More...</a><br /></td></tr>
+<tr class="separator:ac5da5c91216cb1ce9cf9c17a2030df00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8706d230a5f7f6d03453a0d2f927dfe"><td class="memItemLeft" align="right" valign="top"><a id="ac8706d230a5f7f6d03453a0d2f927dfe"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#ac8706d230a5f7f6d03453a0d2f927dfe">SetCudaDeviceNo</a> (int gpu)</td></tr>
 <tr class="memdesc:ac8706d230a5f7f6d03453a0d2f927dfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the number of Nvidia GPU (support cuda)(only windows) <br /></td></tr>
@@ -96,11 +103,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>EnableCuda</b> (bool 
 <tr class="separator:a25d439807a5546dbc887c17f65fb977f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ee149db1317cdd343a37fbc72a3f4e6"><td class="memItemLeft" align="right" valign="top"><a id="a7ee149db1317cdd343a37fbc72a3f4e6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a7ee149db1317cdd343a37fbc72a3f4e6">SetOutputPath</a> (const std::string &amp;output_path)</td></tr>
-<tr class="memdesc:a7ee149db1317cdd343a37fbc72a3f4e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the path of the output that you wanted <br /></td></tr>
+<tr class="memdesc:a7ee149db1317cdd343a37fbc72a3f4e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the file path of the output that you wanted, include filename <br /></td></tr>
 <tr class="separator:a7ee149db1317cdd343a37fbc72a3f4e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a581e72ee2b146ca78e4d93d58a382280"><td class="memItemLeft" align="right" valign="top"><a id="a581e72ee2b146ca78e4d93d58a382280"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a581e72ee2b146ca78e4d93d58a382280">SetOutputBitRate</a> (int64_t bitRate)</td></tr>
-<tr class="memdesc:a581e72ee2b146ca78e4d93d58a382280"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the video bitrate of the output file <br /></td></tr>
+<tr class="memdesc:a581e72ee2b146ca78e4d93d58a382280"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the video bitrate of the output file bps <br /></td></tr>
 <tr class="separator:a581e72ee2b146ca78e4d93d58a382280"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac61f168abc43bb368fe3ae06d91c55de"><td class="memItemLeft" align="right" valign="top"><a id="ac61f168abc43bb368fe3ae06d91c55de"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#ac61f168abc43bb368fe3ae06d91c55de">SetOutputSize</a> (int width, int height)</td></tr>
@@ -121,6 +128,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a95e7943151b7fb59288c8b7e5fe59715"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a95e7943151b7fb59288c8b7e5fe59715">EnableColorPlus</a> (bool enable, const std::string &amp;model_path=&quot;&quot;)</td></tr>
 <tr class="memdesc:a95e7943151b7fb59288c8b7e5fe59715"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to turn on ImageFusion.  <a href="classins__media_1_1_video_stitcher.html#a95e7943151b7fb59288c8b7e5fe59715">More...</a><br /></td></tr>
 <tr class="separator:a95e7943151b7fb59288c8b7e5fe59715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb04adb8f0646111d10aff71224dc56"><td class="memItemLeft" align="right" valign="top"><a id="a0eb04adb8f0646111d10aff71224dc56"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a0eb04adb8f0646111d10aff71224dc56">EnableH265Encoder</a> ()</td></tr>
+<tr class="memdesc:a0eb04adb8f0646111d10aff71224dc56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to use h265 encoder, default encoder is h264. <br /></td></tr>
+<tr class="separator:a0eb04adb8f0646111d10aff71224dc56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad89af984d5e41cf5e51dcba9c9aaf92d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#ad89af984d5e41cf5e51dcba9c9aaf92d">SetStitchType</a> (STITCH_TYPE type)</td></tr>
 <tr class="memdesc:ad89af984d5e41cf5e51dcba9c9aaf92d"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the type of stitch,  <a href="classins__media_1_1_video_stitcher.html#ad89af984d5e41cf5e51dcba9c9aaf92d">More...</a><br /></td></tr>
 <tr class="separator:ad89af984d5e41cf5e51dcba9c9aaf92d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,6 +153,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a3eec59c32f57e9e41cd7838d1c45cede">GetStitchProgress</a> () const</td></tr>
 <tr class="memdesc:a3eec59c32f57e9e41cd7838d1c45cede"><td class="mdescLeft">&#160;</td><td class="mdescRight">get stitch progress 0 ~ 100 <br /></td></tr>
 <tr class="separator:a3eec59c32f57e9e41cd7838d1c45cede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6548aab110986a70acbc319a3266bc95"><td class="memItemLeft" align="right" valign="top"><a id="a6548aab110986a70acbc319a3266bc95"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classins__media_1_1_video_stitcher.html#a6548aab110986a70acbc319a3266bc95">SetCameraAccessoryType</a> (CameraAccessoryType type)</td></tr>
+<tr class="memdesc:a6548aab110986a70acbc319a3266bc95"><td class="mdescLeft">&#160;</td><td class="mdescRight">set CameraAccessoryType <br /></td></tr>
+<tr class="separator:a6548aab110986a70acbc319a3266bc95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af82289de938961aac777efd84ddd89c8"><td class="memItemLeft" align="right" valign="top"><a id="af82289de938961aac777efd84ddd89c8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>EnableAreaSample</b> (bool enable)</td></tr>
+<tr class="separator:af82289de938961aac777efd84ddd89c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class that stitch video, only support the formats that maked by Insta360 camera, for example *.insv . If you want to make the most of multiple GPUs, you must create process instances to correspond to each GPU. In a process instance, multiple GPUs are not supported. </p>
@@ -281,6 +299,43 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">enable</td><td>true is on and false is off, default off </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac5da5c91216cb1ce9cf9c17a2030df00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5da5c91216cb1ce9cf9c17a2030df00">&#9670;&nbsp;</a></span>SetImageSequenceInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ins_media::VideoStitcher::SetImageSequenceInfo </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>output_dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IMAGE_TYPE&#160;</td>
+          <td class="paramname"><em>image_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set the info of imgage sequence </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">output_dir</td><td>the output dir of imgage sequence. does not include filename </td></tr>
+    <tr><td class="paramname">image_type</td><td>support jpg and png </td></tr>
   </table>
   </dd>
 </dl>
