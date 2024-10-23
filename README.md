@@ -30,11 +30,7 @@ MediaSDK-Cpp is a C++ library to handle stitching, editing of media from Insta36
 
 ## Table of contents
 
-- [MediaSDK-Cpp](#mediasdk-cpp)
-    - [Supported cameras](#supported-cameras)
-    - [Supported platforms](#supported-platforms)
-    - [Supported fileformat](#supported-fileformat)
-  - [Table of contents](#table-of-contents)
+- [Table of contents](#table-of-contents)
   - [<span id="demo">Running test demo</span>](#running-test-demo)
   - [<span id="started">Get Started</span>](#get-started)
     - [<span id="note">Note</span>](#note)
