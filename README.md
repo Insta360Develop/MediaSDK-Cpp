@@ -21,7 +21,7 @@ MediaSDK-Cpp is a C++ library to handle stitching, editing of media from Insta36
 | Windows  | Windows 7 or later, only x64 supported        |
 | Linux    | Ubuntu, other distributions need to be tested |
 
-### Supported fileformat
+### Supported file format
 
 | filetype | import format | export format |
 | :------- | :------------ | :------------ |
