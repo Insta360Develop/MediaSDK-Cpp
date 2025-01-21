@@ -1,5 +1,5 @@
 # MediaSDK-Cpp
-MediaSDK-Cpp is a C++ library to handle stitching, editing of media from Insta360 Cameras.
+MediaSDK-Cpp is a C++ library to handle stitching, editing of media from Insta360 360 cameras.
 
 
 
@@ -75,8 +75,8 @@ The image stitcher runs synchronously.
 
 **CUDA Support:** 
 
-- Windows： support 
-- Ubuntu: partial support  (Removing the function that call Flowstate can speed up the stitch speed )
+- Windows： Supported
+- Ubuntu: Partial support  (Removing the function that calls FlowState can improve the stitching speed )
 
 
 ### <span id="ImageStitcher">Image Stitcher</span>
