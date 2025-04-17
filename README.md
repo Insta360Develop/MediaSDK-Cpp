@@ -1,7 +1,10 @@
 # MediaSDK-Cpp
 MediaSDK-Cpp is a C++ library to handle stitching, editing of media from Insta360 360 cameras.
 
-
+## Support
+Developers' Page: https://www.insta360.com/developer/home  
+Insta360 Enterprise: https://www.insta360.com/enterprise  
+Issue Report: https://insta.jinshuju.com/f/hZ4aMW  
 
 ### Supported cameras
 
